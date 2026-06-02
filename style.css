@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.input-section {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+label {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  font-size: 2rem;
+  padding: 20px;
+  border: 3px solid #667eea;
+  border-radius: 12px;
+  text-align: right;
+  padding-right: 80px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #764ba2;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.unit {
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  font-size: 1.8rem;
+  color: #667eea;
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  padding: 25px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  position: relative;
+  top: 0;
+}
+
+#calcBtn {
+  background: linear-gradient(180deg, #667eea 0%, #5568d3 100%);
+  color: white;
+  margin-bottom: 30px;
+  border-bottom: 4px solid #4a52b8;
+}
+
+#calcBtn:hover {
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(180deg, #7a8fee 0%, #667eea 100%);
+}
+
+#calcBtn:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+  border-bottom-width: 2px;
+  top: 2px;
+}
+
+.result-section {
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.result-label {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.result-value {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.result-unit {
+  font-size: 1.8rem;
+  opacity: 0.9;
+}
+
+.detail-box {
+  background: #f5f5f5;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.detail-label {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-text {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.detail-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+#clearBtn {
+  background: linear-gradient(180deg, #666 0%, #555 100%);
+  color: white;
+  font-size: 1.6rem;
+  border-bottom: 4px solid #444;
+}
+
+#clearBtn:hover {
+  background: linear-gradient(180deg, #777 0%, #666 100%);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+#clearBtn:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-bottom-width: 2px;
+  top: 2px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  label {
+    font-size: 1.6rem;
+  }
+
+  input {
+    font-size: 1.8rem;
+    padding: 18px;
+    padding-right: 70px;
+  }
+
+  .unit {
+    font-size: 1.6rem;
+    top: 65px;
+    right: 15px;
+  }
+
+  button {
+    padding: 20px;
+    font-size: 1.6rem;
+  }
+
+  .result-value {
+    font-size: 3rem;
+  }
+
+  .result-label,
+  .result-unit {
+    font-size: 1.4rem;
+  }
+
+  .detail-label,
+  .detail-text {
+    font-size: 1.4rem;
+  }
+}
