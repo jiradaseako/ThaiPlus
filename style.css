@@ -170,6 +170,13 @@ button {
   border-bottom: none;
 }
 
+.detail-row#statusRow {
+  padding: 12px;
+  margin: 12px -12px;
+  border-radius: 8px;
+  background: #f0f0f0;
+}
+
 .detail-text {
   font-size: 1.5rem;
   color: #666;
@@ -198,6 +205,17 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   border-bottom-width: 2px;
   top: 2px;
+}
+
+.info-note {
+  background: #E8F4F8;
+  color: #2A5A80;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  border-left: 4px solid #4A9FBF;
+  line-height: 1.6;
 }
 
 /* Mobile adjustments */
