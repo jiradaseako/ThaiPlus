@@ -11,17 +11,32 @@
     <h1>คำนวณยอดใช้ได้คนละครึ่ง</h1>
 
     <div class="input-section">
-      <label for="balance">สิทธิคงเหลือวันนี้</label>
+      <label for="balance">สิทธิคงเหลือวันนี้ <span style="color: red;">*</span></label>
       <input
         type="number"
         id="balance"
-        placeholder="กรอกยอดคงเหลือ"
+        placeholder="กรอกเงินคงเหลือ (จำเป็น)"
+        inputmode="decimal"
+      >
+      <span class="unit">บาท</span>
+    </div>
+
+    <div class="input-section">
+      <label for="price">ราคาของที่ต้องการซื้อ <span style="color: #999;">(ไม่จำเป็น)</span></label>
+      <input
+        type="number"
+        id="price"
+        placeholder="กรอกราคา (ถ้ามี)"
         inputmode="decimal"
       >
       <span class="unit">บาท</span>
     </div>
 
     <button id="calcBtn" onclick="calculate()">คำนวณ</button>
+
+    <div class="info-note">
+      💡 <strong>หมายเหตุ:</strong> สิทธิคงเหลือช่วยจ่ายได้สูงสุด 200 บาท
+    </div>
 
     <div class="result-section" id="resultSection" style="display: none;">
       <div class="result-box">
@@ -35,6 +50,14 @@
         <div class="detail-row">
           <span class="detail-text">สิทธิคงเหลือวันนี้:</span>
           <span class="detail-value"><span id="detailBalance">0</span> บาท</span>
+        </div>
+        <div class="detail-row" id="priceRow" style="display: none;">
+          <span class="detail-text">ราคาของที่ต้องการซื้อ:</span>
+          <span class="detail-value"><span id="detailPrice">0</span> บาท</span>
+        </div>
+        <div class="detail-row" id="statusRow" style="display: none;">
+          <span class="detail-text" id="statusText"></span>
+          <span class="detail-value" id="statusValue"></span>
         </div>
         <div class="detail-row">
           <span class="detail-text">ต้องเติมเงิน:</span>
